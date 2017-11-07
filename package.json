@@ -1,0 +1,14 @@
+{
+  "name": "driving-app",
+  "version": "1.0.0",
+  "author": "Nemanja Juric",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-ui-router": "^0.4.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-ruby-sass": "^2.1.1"
+  }
+}

@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-8 offset-sm-2">
+            <h1 class="display-4">Driving App</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 offset-sm-2 my-3">
+            <button class="btn btn-warning" ui-sref="home">Go Back</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 offset-sm-2">
+            <div ng-show="mapVisible">
+                <span class="lead">
+                    <b>{{start}} - {{end}}</b>
+                </span>
+                <div id="map" class="my-3"></div>
+                <p class="lead">
+                    <b>Distance: </b>{{distance}}
+                </p>
+                <p class="lead">
+                    <b>About: </b>{{duration}}
+                </p>
+            </div>
+            <div class="map-error text-center" ng-hide="mapVisible">
+                <h1 class="display-1">:(</h1>
+            </div>
+        </div>
+    </div>
+</div>

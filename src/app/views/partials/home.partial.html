@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-8 offset-sm-2">
+            <h1 class="display-4">Driving App</h1>
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col-sm-3 offset-sm-2">
+            <div class="form-group">
+                <input type="text" class="form-control" id="start-city" placeholder="Start" ng-model="start">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+                <input type="text" class="form-control" id="end-city" placeholder="End" ng-model="end">
+            </div>
+        </div>
+        <div class="col-sm-2 text-right">
+            <button type="submit" class="btn btn-primary" ng-click="$ctrl.submit()">Submit</button>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row" ng-repeat="route in routes track by $index">
+        <div class="col-sm-2 offset-sm-2">
+            #{{$index + 1}}
+        </div>
+        <div class="col-sm-3">
+            {{route.start}} - {{route.end}}
+        </div>
+        <div class="col-sm-3 text-right">
+            <button class="btn btn-primary" ng-click="$ctrl.details(route, $index + 1)">Detail</button>
+            <button class="btn btn-danger" ng-click="$ctrl.removeRoute(route)">Delete</button>
+        </div>
+    </div>
+    <div class="row" ng-if="routes.length > 0">
+        <div class="col-sm-8 offset-sm-2">
+            <p class="lead my-3">You have {{routes.length}} route{{routes.length > 1 ? 's' : ''}}.</p>
+        </div>
+    </div>
+</div>
