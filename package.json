@@ -2,6 +2,10 @@
   "name": "driving-app",
   "version": "1.0.0",
   "author": "Nemanja Juric",
+  "scripts":{
+    "start": "gulp watch",
+    "build": "gulp build"
+  },
   "dependencies": {
     "angular": "^1.6.6",
     "angular-ui-router": "^0.4.3"
@@ -9,6 +13,9 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
-    "gulp-ruby-sass": "^2.1.1"
+    "gulp-html-replace": "^1.6.2",
+    "gulp-js-minify": "0.0.3",
+    "gulp-ruby-sass": "^2.1.1",
+    "gulp-uglify": "^3.0.0"
   }
 }
